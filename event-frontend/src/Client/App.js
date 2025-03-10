@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import EventList from '../Components/EventList';
 import EventForm from '../Components/EventForm';
 import axios from 'axios';
+import '../Styles/App.css'
 
 const App = () => {
   const [events, setEvents] = useState([]);
@@ -59,6 +60,8 @@ const App = () => {
       <EventList events={events} onDelete={handleDeleteEvent} onUpdate={handleUpdateEvent} />
     </div>
   );
+  
 };
+
 
 export default App;

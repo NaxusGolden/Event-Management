@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Modal from 'react-modal';
 import '../Styles/ModalStyles.css';
+import '../Styles/EventList.css';
 
 Modal.setAppElement('#app');
 
@@ -74,8 +75,8 @@ const EventList = ({ events, onDelete, onUpdate }) => {
               <td style={tableCellStyle}>{event.description}</td>
               <td style={tableCellStyle}>{event.location}</td>
               <td style={tableCellStyle}>
-                <button onClick={() => openModal(event)} style={buttonStyle}>Actualizar</button>
-                <button onClick={() => onDelete(event._id)} style={buttonStyle}>Eliminar</button>
+                <button className="update" onClick={() => openModal(event)} style={buttonStyle}>Actualizar</button>
+                <button className="delete" onClick={() => onDelete(event._id)} style={buttonStyle}>Eliminar</button>
               </td>
             </tr>
           ))}

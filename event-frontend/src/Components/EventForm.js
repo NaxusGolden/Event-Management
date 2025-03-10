@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import '../Styles/EventForm.css'
 
 const EventForm = ({ onEventSubmit, initialEvent }) => {
   const [title, setTitle] = useState('');
@@ -29,6 +30,11 @@ const EventForm = ({ onEventSubmit, initialEvent }) => {
     }
 
     onEventSubmit({ title, date, description, location });
+
+    setTitle('');
+    setDate('');
+    setDescription('');
+    setLocation('');
   };
 
   return (
