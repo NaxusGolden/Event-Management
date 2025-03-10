@@ -1,0 +1,3 @@
+Iniciar el npm start para el frontend en la ruta /event-frontend.
+
+Iniciar el backend en /Server con el comando node server.js
